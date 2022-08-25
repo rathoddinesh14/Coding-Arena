@@ -29,7 +29,7 @@ int main() {
     }
 
     // adjacency list
-    vector<pair<int, int>> adj[n];
+    vector<pair<int, int> > adj[n];
 
     for (int i = 0; i < m; i++) {
         int u, v, w;
@@ -45,12 +45,15 @@ int main() {
     int path[n];
     bool visited[n];
     int curr_capcity[n];
-    int cost[n];
+    int cost[cars];
 
     for (int i = 0; i < n; i++) {
         dist[i] = numeric_limits<int>::max();
         visited[i] = false;
         curr_capcity[i] = 0;
+    }
+
+    for (int i = 0; i < cars; i++) {
         cost[i] = -1;
     }
 
@@ -60,6 +63,7 @@ int main() {
     int curr_car = 0;
 
     while (all_visited(visited, n) == false) {
+
         int min_dist = numeric_limits<int>::max();
         int min_index = -1;
         for (int i = 0; i < n; i++) {
@@ -68,7 +72,6 @@ int main() {
                 min_index = i;
             }
         }
-        
         if (curr_capcity[min_index] < capcity[min_index]) {
             curr_capcity[min_index]++;
             cost[curr_car] = min_dist + f;
@@ -84,20 +87,21 @@ int main() {
         for (int i = 0; i < adj[min_index].size(); i++) {
             int v = adj[min_index][i].first;
             int w = adj[min_index][i].second;
-            if (dist[v] > dist[min_index] + w) {
+            if ( dist[v] > dist[min_index] + w) {
                 dist[v] = dist[min_index] + w;
                 path[v] = min_index;
             }
         }
     }
 
-    for (int i = 0; i < curr_car; i++) {
+    for (int i = 0; i < cars; i++) {
         cout << cost[i] << " ";
     }
-    for (int i = curr_car; i < cars; i++)
-    {
-        cout << "-1" << " ";
-    }
+    cout << endl;
+    // for (int i = curr_car; i < cars; i++)
+    // {
+    //     cout << "-1" << " ";
+    // }
 
     return 0;
 }
