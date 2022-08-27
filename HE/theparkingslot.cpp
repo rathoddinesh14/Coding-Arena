@@ -1,12 +1,20 @@
 // https://www.hackerearth.com/practice/algorithms/graphs/shortest-path-algorithms/practice-problems/algorithm/the-parking-slot-9fac40d6/
-
+// https://www.youtube.com/watch?v=EFg3u_E6eHU
 
 #include <iostream>
 #include <vector>
 #include <algorithm>
 #include <limits>
+#include <queue>
 
 using namespace std;
+
+class Comparator {
+public:
+    bool operator()(const pair<int, long int>& p1, const pair<int, long int>& p2) {
+        return p1.second > p2.second;
+    }
+};
 
 bool all_visited(bool v[] , int n) {
     for (int i = 0; i < n; i++) {
@@ -23,13 +31,15 @@ int main() {
     cin >> n >> m >> f;
 
     int capcity[n];
+    long int total_capacity = 0;
 
     for (int i = 0; i < n; i++) {
         cin >> capcity[i];
+        total_capacity += capcity[i];
     }
 
     // adjacency list
-    vector<pair<int, int> > adj[n];
+    vector<pair<int, long int> > adj[n];
 
     for (int i = 0; i < m; i++) {
         int u, v, w;
@@ -41,14 +51,14 @@ int main() {
     int cars;
     cin >> cars;
 
-    int dist[n];
+    long int dist[n];
     int path[n];
     bool visited[n];
     int curr_capcity[n];
-    int cost[cars];
+    long int cost[cars];
 
     for (int i = 0; i < n; i++) {
-        dist[i] = numeric_limits<int>::max();
+        dist[i] = numeric_limits<long int>::max();  // this line is important
         visited[i] = false;
         curr_capcity[i] = 0;
     }
@@ -62,16 +72,16 @@ int main() {
 
     int curr_car = 0;
 
-    while (all_visited(visited, n) == false) {
+    priority_queue<pair<int, long int>, vector<pair<int, long int> >, Comparator> pq;
+    pq.push(make_pair(0, 0));
 
-        int min_dist = numeric_limits<int>::max();
-        int min_index = -1;
-        for (int i = 0; i < n; i++) {
-            if (!visited[i] && dist[i] < min_dist) {
-                min_dist = dist[i];
-                min_index = i;
-            }
-        }
+    while (!pq.empty() && curr_car < total_capacity) {
+
+        int min_index = pq.top().first;
+        long int min_dist = pq.top().second;
+
+        // cout << "min_index: " << min_index << " min_dist: " << min_dist << endl;
+
         if (curr_capcity[min_index] < capcity[min_index]) {
             curr_capcity[min_index]++;
             cost[curr_car] = min_dist + f;
@@ -81,15 +91,18 @@ int main() {
             }
             continue;
         }
+
+        pq.pop();
         visited[min_index] = true;
 
         // update the distance of all the neighbours of the min_index
         for (int i = 0; i < adj[min_index].size(); i++) {
             int v = adj[min_index][i].first;
             int w = adj[min_index][i].second;
-            if ( dist[v] > dist[min_index] + w) {
+            if (!visited[v] && dist[v] > dist[min_index] + w) {
                 dist[v] = dist[min_index] + w;
                 path[v] = min_index;
+                pq.push(make_pair(v, dist[v]));
             }
         }
     }
@@ -102,6 +115,11 @@ int main() {
     // {
     //     cout << "-1" << " ";
     // }
+
+    // for (int i = 0; i < n; i++) {
+    //     cout << curr_capcity[i] << " " << capcity[i] << endl;
+    // }
+
 
     return 0;
 }
