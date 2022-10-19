@@ -2,13 +2,13 @@
 
 
 /**
- * @file mst.cpp
- * @brief Kruskal's algorithm to find Minimum
+ * @brief A graph can have multiple spanning trees.
+ * N vertices and N-1 edges.
+ * Note : Greedy algorithm.
+ * Kruskal's algorithm to find Minimum
  * Spanning Tree of a given connected, undirected and
  * weighted graph
  * Time Complexity: O(ElogE) or O(ElogV).
- * @version 0.1
- * @date 2022-09-28
  */
 
 #include <iostream>

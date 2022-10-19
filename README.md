@@ -1,5 +1,10 @@
 # Coding-Arena
 
+## MST
+[MST - Prim's Algorithm](HE/spanning%20tree/prims.cpp)
+
+[MST - Kruskal's Algorithm](HE/spanning%20tree/kruskal.cpp)
+
 <!-- Memory section -->
 ## Memory
 <!-- add link to memleak.cpp -->

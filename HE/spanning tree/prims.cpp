@@ -61,7 +61,7 @@ void Graph::primMST() {
 	// To keep track of vertices included in MST
 	vector<bool> inMST(V, false);
 
-    dist[src] = 0;
+	dist[src] = 0;
 	// Insert source itself in priority queue and initialize
 	// its dist as 0.
 	pq.push(make_pair(dist[src], src));
