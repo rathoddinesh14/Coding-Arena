@@ -17,3 +17,6 @@
 ## Sequence
 <!-- add link to golombseq.cpp -->
 [A program to demonstrate Golomb sequence in C++.](golombseq.cpp)
+
+<!-- Count subarray with sum = k -->
+[A program to count subarray with sum = k in C++.](countsubarray.cpp)
