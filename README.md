@@ -20,3 +20,6 @@
 
 <!-- Count subarray with sum = k -->
 [A program to count subarray with sum = k in C++.](countsubarray.cpp)
+
+<!-- minimize maximum of array -->
+[A program to minimize maximum of array in C++.](leetcode/minmaxarray.cpp)
