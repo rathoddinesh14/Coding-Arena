@@ -23,3 +23,6 @@
 
 <!-- minimize maximum of array -->
 [A program to minimize maximum of array in C++.](leetcode/minmaxarray.cpp)
+
+<!-- number of islands -->
+[A program to count number of islands in C++.](leetcode/numislands.cpp)
