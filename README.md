@@ -26,3 +26,7 @@
 
 <!-- number of islands -->
 [A program to count number of islands in C++.](leetcode/numislands.cpp)
+
+## Dynamic Programming
+<!-- Target Sum Subset -->
+[A program to find if there is a subset with given sum in C++.](gfg/targetsumsubset.cpp)
