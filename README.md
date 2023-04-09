@@ -30,3 +30,6 @@
 ## Dynamic Programming
 <!-- Target Sum Subset -->
 [A program to find if there is a subset with given sum in C++.](gfg/targetsumsubset.cpp)
+
+<!-- Max sum of non adj elements -->
+[A program to find max sum of non adj elements in C++.](gfg/maxsumnonadjelements.cpp)
