@@ -33,3 +33,7 @@
 
 <!-- Max sum of non adj elements -->
 [A program to find max sum of non adj elements in C++.](gfg/maxsumnonadjelements.cpp)
+
+## Graph
+<!-- number of ways to reach destination -->
+[A program to find number of ways to reach destination in C++.](gfg/numwaysarrivedest.cpp)
