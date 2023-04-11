@@ -24,9 +24,6 @@
 <!-- minimize maximum of array -->
 [A program to minimize maximum of array in C++.](leetcode/minmaxarray.cpp)
 
-<!-- number of islands -->
-[A program to count number of islands in C++.](leetcode/numislands.cpp)
-
 ## Dynamic Programming
 <!-- Target Sum Subset -->
 [A program to find if there is a subset with given sum in C++.](gfg/targetsumsubset.cpp)
@@ -37,3 +34,9 @@
 ## Graph
 <!-- number of ways to reach destination -->
 [A program to find number of ways to reach destination in C++.](gfg/numwaysarrivedest.cpp)
+
+<!-- number of provinces -->
+[A program to find number of provinces in C++.](gfg/numprovinces.cpp)
+
+<!-- number of islands -->
+[A program to count number of islands in C++.](leetcode/numislands.cpp)
