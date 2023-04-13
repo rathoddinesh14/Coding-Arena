@@ -40,3 +40,7 @@
 
 <!-- number of islands -->
 [A program to count number of islands in C++.](leetcode/numislands.cpp)
+
+## Matrix
+<!-- matrix chain multiplication -->
+[A program to find minimum number of multiplications to multiply a chain of matrices in C++.](gfg/matrixchainmult.cpp)
