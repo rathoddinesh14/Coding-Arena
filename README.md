@@ -48,3 +48,6 @@
 ## Bit Manipulation
 <!-- count set bits -->
 [A program to count set bits till an integer(1...N) in C++.](gfg/countsetbits.cpp)
+
+<!-- count set bits -->
+[A program to count set bits till an integer(1...N) and return list of count in C++.](leetcode/countingsbits.cpp)
