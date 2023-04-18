@@ -44,3 +44,7 @@
 ## Matrix
 <!-- matrix chain multiplication -->
 [A program to find minimum number of multiplications to multiply a chain of matrices in C++.](gfg/matrixchainmult.cpp)
+
+## Bit Manipulation
+<!-- count set bits -->
+[A program to count set bits till an integer(1...N) in C++.](gfg/countsetbits.cpp)
