@@ -24,6 +24,9 @@
 <!-- minimize maximum of array -->
 [A program to minimize maximum of array in C++.](leetcode/minmaxarray.cpp)
 
+<!-- number of subseq aibjck -->
+[A program to find number of subsequences of the form aibjck in C++.](gfg/aibjck.cpp)
+
 ## Dynamic Programming
 <!-- Target Sum Subset -->
 [A program to find if there is a subset with given sum in C++.](gfg/targetsumsubset.cpp)
