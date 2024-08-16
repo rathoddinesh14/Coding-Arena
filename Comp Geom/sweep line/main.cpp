@@ -4,6 +4,9 @@
 #include "Status.h"
 #include <vector>
 #include <set>
+#include <algorithm>
+#include "BalancedBST.h"
+
 using namespace std;
 
 
@@ -25,6 +28,7 @@ struct StatusComparator {
 // Sweep Line Algorithm function
 std::vector<std::pair<int, int>> sweepLine(std::vector<Segment>& segments) {
     std::vector<Event> events;
+
     std::vector<std::pair<int, int>> intersections;
 
     // Create events for all segments
@@ -63,11 +67,21 @@ std::vector<std::pair<int, int>> sweepLine(std::vector<Segment>& segments) {
 }
 
 int main() {
-    std::vector<Segment> segments = {{1, 1, 3, 3}, {2, 2, 4, 4}};
-    std::vector<std::pair<int, int>> intersections = sweepLine(segments);
+    // std::vector<Segment> segments = {{1, 1, 3, 3}, {2, 2, 4, 4}};
+    // std::vector<std::pair<int, int>> intersections = sweepLine(segments);
 
-    std::cout << "Intersections:" << std::endl;
-    for (const auto& intersection : intersections) {
-        std::cout << "(" << intersection.first << ", " << intersection.second << ")" << std::endl;
-    }
+    // std::cout << "Intersections:" << std::endl;
+    // for (const auto& intersection : intersections) {
+    //     std::cout << "(" << intersection.first << ", " << intersection.second << ")" << std::endl;
+    // }
+
+    AVLTree *tree = new AVLTree();
+
+    tree->insert(10);
+    tree->insert(20);
+    tree->insert(15);
+
+    // print tree
+    tree->inorder();
+    tree->preorder();
 }
