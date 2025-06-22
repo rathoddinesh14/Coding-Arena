@@ -1,0 +1,20 @@
+{
+  "name": "todo-list-webpack-typescript",
+  "version": "1.0.0",
+  "description": "A simple Todo List app using TypeScript and Webpack.",
+  "main": "dist/main.js",
+  "scripts": {
+    "start": "webpack serve --mode development --progress --open",
+    "build": "webpack --mode production --progress"
+  },
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "html-webpack-plugin": "^5.6.3",
+    "ts-loader": "^9.0.0",
+    "typescript": "^5.0.0",
+    "webpack": "^5.0.0",
+    "webpack-cli": "^5.0.0",
+    "webpack-dev-server": "^4.0.0"
+  }
+}

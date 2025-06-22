@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Todo List App</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #f4f4f4; margin: 0; padding: 0; }
+    #app { max-width: 400px; margin: 40px auto; background: #fff; padding: 2rem; border-radius: 8px; box-shadow: 0 2px 8px #0001; }
+    h1 { text-align: center; }
+    ul { list-style: none; padding: 0; }
+    li { display: flex; align-items: center; justify-content: space-between; padding: 0.5rem 0; border-bottom: 1px solid #eee; }
+    li.completed span { text-decoration: line-through; color: #aaa; }
+    button { margin-left: 0.5rem; }
+    form { display: flex; margin-bottom: 1rem; }
+    input[type="text"] { flex: 1; padding: 0.5rem; border: 1px solid #ccc; border-radius: 4px; }
+    button[type="submit"] { padding: 0.5rem 1rem; border: none; background: #007bff; color: #fff; border-radius: 4px; cursor: pointer; }
+    button[type="submit"]:hover { background: #0056b3; }
+  </style>
+</head>
+<body>
+  <div id="app">
+    <h1>Todo List</h1>
+    <form id="todo-form">
+      <input type="text" id="todo-input" placeholder="Add a new todo..." required />
+      <button type="submit">Add</button>
+    </form>
+    <ul id="todo-list"></ul>
+  </div>
+</body>
+</html>
